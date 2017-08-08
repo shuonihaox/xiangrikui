@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>向日葵艺术中心</title>
+<link rel="stylesheet" href="css/main.css">
+<!-- <link rel="stylesheet" href="css/tab_3.css"> -->
+<script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="main_demo2">
+        <div class="top_main">
+            <div class="logo"></div>
+            <div class="container"> 
+                <ul class="tabs">
+                    <li ><a href="index.html">首页</a></li>
+                    <li class="active"><a href="draw.html">美术</a></li>
+                    <li><a href="calligraphy.html">书法</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="tab_container">
+             <div id="images-scroll" class="images-scroll">
+                <ul>
+                    <li class="active"><a href=""><img src="images/xrk_1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/xrk_2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/xrk_3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/xrk_4.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/xrk_5.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/xrk_6.jpg" alt=""></a></li>
+                </ul>
+                <span id="left-scroll" class="left-scroll"></span>
+                <span id="right-scroll" class="right-scroll"></span>
+            </div>
+        </div>
+    </div>   
+     <div id="tab1" class="tab_content" style="display: block;">
+        <div class="tab_container">
+            <div class="tab_img">
+                <div class="tab_bg">
+                    <div class="tab_top">
+                        <h1>向日葵艺术中心</h1>
+                        <p>最专业的美术教育机构</p>
+                        <p>多次获得中国少儿美术国际金奖</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab3" class="tab_content" style="display: block; ">
+        <div class="tab_container">
+            <div class="tab_img">
+                <div class="tab_bg">
+                    <div class="tab_top">
+                        <h1>向日葵艺术中心</h1>
+                        <p>最专业的美术教育机构</p>
+                        <p>多次获得中国少儿美术国际金奖</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="footer">
+   <div class="footer_content">
+        <div class="left_box">
+            <h2>向日葵艺术中心</h2>
+            <p>最专业的美术教育，覆盖幼儿到高中阶段，素描，水彩，手工制作，还有书法供你选择</p>
+        </div>
+        <div class="right_box">
+            <div class="about fl pat5">
+                <h4>关于</h4>
+                <ul class="list_sty">
+                    <li>关于我们</li>
+                    <li>历史信息</li>
+                    <li>课程</li>
+                    <li>获得奖项</li>
+                </ul>
+            </div>
+            <div class="contant fl pat5">
+                <h4>联系方式</h4>
+                <ul class="list_sty">
+                    <li>联系人</li>
+                    <li>手机</li>
+                </ul>
+            </div>
+            <div class="address fl pat5">
+                <h4>地址</h4>
+                <ul class="list_sty">
+                    <li>地址</li>
+                    <li>老师地址</li>
+                </ul>
+            </div>
+            <div class="recruit fl pat5">
+                <h4>招聘</h4>
+                <ul class="list_sty">
+                    <li>联系人</li>
+                    <li>联系电话</li>
+                    <li>招聘岗位</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clean"></div>
+   </div> 
+</div>
+<script type="text/javascript">
+
+// $(document).ready(function() {
+
+//     //Default Action
+//     $(".tab_content").hide(); //Hide all content
+//     $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+//     $(".tab_content:first").show(); //Show first tab content
+    
+//     //On Click Event
+//     $("ul.tabs li").click(function() {
+//         $("ul.tabs li").removeClass("active"); //Remove any "active" class
+//         $(this).addClass("active"); //Add "active" class to selected tab
+//         $(".tab_content").hide(); //Hide all tab content
+//         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+//         $(activeTab).fadeIn(); //Fade in the active content
+//         return false;
+//     });
+
+// });
+            $("#images-scroll").mouseover(function(){
+                $("#left-scroll").animate({left: '10px',opacity:'1',},400);
+                $("#right-scroll").animate({right: '10px',opacity:'1',},400);
+            })
+            $("#images-scroll").mouseleave(function(){
+                $("#left-scroll").animate({left: '-40px',opacity:'0',},400);
+                $("#right-scroll").animate({right: '-40px',opacity:'0',},400);               
+            })
+ 
+            imgScroll=setInterval("runScroll()",3000);
+            var last_idx=$("#images-scroll ul li").index($("#images-scroll ul li:last"));
+            function runScroll(){                   
+                var idx=$("#images-scroll ul li").index($("#images-scroll ul .active")[0]);
+                $("#images-scroll li").eq(idx).removeClass("active").hide();
+                idx+=1;
+                if(idx%(last_idx+1)==0){
+                    idx=0;
+                }
+                $("#images-scroll li").eq(idx).addClass("active").show();
+            }
+            $("#left-scroll").click(function(){
+                var idx=$("#images-scroll ul li").index($("#images-scroll ul .active")[0]);
+                $("#images-scroll li").eq(idx).removeClass("active").hide();
+                idx-=1;
+                if(idx==-1){
+                    idx=last_idx;
+                }
+                $("#images-scroll li").eq(idx).addClass("active").show();
+            })
+            $("#right-scroll").click(function(){
+                runScroll();
+            })              
+</script>
+</body>
+</html>

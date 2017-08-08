@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>向日葵艺术中心</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/tab_3.css">
+<script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="main_demo2">
+        <div class="top_main">
+            <div class="logo"></div>
+            <div class="container"> 
+                <ul class="tabs">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="draw.html">美术</a></li>
+                    <li><a href="calligraphy.html">书法</a></li>
+                    <li  class="active"><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     <div class="call_top">
+        <div class="call_top_content">
+            <h1>关于向日葵艺术中心</h1>
+            <p>向日葵艺术中心致力于专业的美术教育，书法绘画</p>
+        </div>
+    </div>
+    <div class="call_box">
+        <div class="call_content">
+            <div class="row">
+                <div class="row_left fl">
+                    <div class="mt30">
+                        <ul>
+                            <li><a href="#guanyu">关于我们</a></li>
+                            <li><a href="#zhanshi">展示你的作品</a></li>
+                            <li><a href="#join">加入我们</a></li>
+                        </ul>
+                </div>
+                </div>
+                <div class="row_right fl pt5">
+                    <div class="mt30" id="guanyu">
+                        <h1>关于我们</h1>
+                        <hr/>
+                        <p>我们有最专业的老师，最专业的辅导，最贴心的教导，最满意的客户反馈Bootstrap中文网www.bootcss.com 创建于2012年。起因是国内没有较好的关于Bootstrap的中文教程和交流渠道，因此，我们对Bootstrap的文档进行了翻译整理，并且建立了QQ群和微博（@bootcss），方便更多热爱这个CSS框架的攻城师们分享、交流自己在前端设计、开发方面的心得。</p>
+                    </div>
+                    <div class="mt30" id="zhanshi">
+                         <h1>展示你的作品</h1>
+                        <hr/>
+                        <p>你是Bootstrap粉丝吗？你正在用Bootstrap做开发吗？你开发的网站是 Powered By Bootstrap 的吗？那就把你的网站show出来吧！</p>
+                        <p>凡是经过确认采用Bootstrap CSS框架的网站，我们会将你所提交网站的截图及介绍展示到“Bootstrap优站精选”列表中，并有机会在 Bootstrap中文网 的首页进行推荐。</p>
+                        <blockquote><p>请发邮件到下面的邮箱，并在邮件标题上注明（Bootstrap网站作品提交 -- 网站名称或网址）。<br>Mail： admin@bootcss.com</p></blockquote>
+                    </div>
+                    <div class="mt30" id="join">
+                         <h1>加入我们</h1>
+                        <hr/>
+                        <p>我们有最专业的老师，最专业的辅导，最贴心的教导，最满意的客户反馈</p>
+                        <p>Bootstrap中文网致力于前端开发推广，坚持分享、开放的互联网精神，旨在为广大前端攻城师、设计师提供交流的平台，如果你和我们有相同的目标，我们乐意一起携手前行</p>
+                        <p>Mail: admin@bootcss.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <div class="clear"></div> 
+   </div>
+<div class="footer">
+   <div class="footer_content">
+        <div class="left_box">
+            <h2>向日葵艺术中心</h2>
+            <p>最专业的美术教育，覆盖幼儿到高中阶段，素描，水彩，手工制作，还有书法供你选择</p>
+        </div>
+        <div class="right_box">
+            <div class="about fl pat5">
+                <h4>关于</h4>
+                <ul class="list_sty">
+                    <li>关于我们</li>
+                    <li>历史信息</li>
+                    <li>课程</li>
+                    <li>获得奖项</li>
+                </ul>
+            </div>
+            <div class="contant fl pat5">
+                <h4>联系方式</h4>
+                <ul class="list_sty">
+                    <li>联系人</li>
+                    <li>手机</li>
+                </ul>
+            </div>
+            <div class="address fl pat5">
+                <h4>地址</h4>
+                <ul class="list_sty">
+                    <li>地址</li>
+                    <li>老师地址</li>
+                </ul>
+            </div>
+            <div class="recruit fl pat5">
+                <h4>招聘</h4>
+                <ul class="list_sty">
+                    <li>联系人</li>
+                    <li>联系电话</li>
+                    <li>招聘岗位</li>
+                </ul>
+            </div>
+        </div>
+   </div> 
+</div>
+<script type="text/javascript">
+
+// $(document).ready(function() {
+
+//     //Default Action
+//     $(".tab_content").hide(); //Hide all content
+//     $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+//     $(".tab_content:first").show(); //Show first tab content
+    
+//     //On Click Event
+//     $("ul.tabs li").click(function() {
+//         $("ul.tabs li").removeClass("active"); //Remove any "active" class
+//         $(this).addClass("active"); //Add "active" class to selected tab
+//         $(".tab_content").hide(); //Hide all tab content
+//         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+//         $(activeTab).fadeIn(); //Fade in the active content
+//         return false;
+//     });
+
+// });
+            $("#images-scroll").mouseover(function(){
+                $("#left-scroll").animate({left: '10px',opacity:'1',},400);
+                $("#right-scroll").animate({right: '10px',opacity:'1',},400);
+            })
+            $("#images-scroll").mouseleave(function(){
+                $("#left-scroll").animate({left: '-40px',opacity:'0',},400);
+                $("#right-scroll").animate({right: '-40px',opacity:'0',},400);               
+            })
+ 
+            imgScroll=setInterval("runScroll()",3000);
+            var last_idx=$("#images-scroll ul li").index($("#images-scroll ul li:last"));
+            function runScroll(){                   
+                var idx=$("#images-scroll ul li").index($("#images-scroll ul .active")[0]);
+                $("#images-scroll li").eq(idx).removeClass("active").hide();
+                idx+=1;
+                if(idx%(last_idx+1)==0){
+                    idx=0;
+                }
+                $("#images-scroll li").eq(idx).addClass("active").show();
+            }
+            $("#left-scroll").click(function(){
+                var idx=$("#images-scroll ul li").index($("#images-scroll ul .active")[0]);
+                $("#images-scroll li").eq(idx).removeClass("active").hide();
+                idx-=1;
+                if(idx==-1){
+                    idx=last_idx;
+                }
+                $("#images-scroll li").eq(idx).addClass("active").show();
+            })
+            $("#right-scroll").click(function(){
+                runScroll();
+            })              
+</script>
+</body>
+</html>
